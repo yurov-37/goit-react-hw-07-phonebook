@@ -4,10 +4,10 @@ import ContactList from './ContactList';
 import Filter from './Filter';
 import { Phonebook, MainTitle, ContactTitle } from './App.styled';
 import { useSelector } from 'react-redux';
-import { getContacts } from 'redux/selectors';
+import { selectContacts } from 'redux/selectors';
 
 export default function App() {
-  const { contacts } = useSelector(getContacts);
+  const { contacts } = useSelector(selectContacts);
 
   return (
     <Phonebook>

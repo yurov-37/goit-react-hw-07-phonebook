@@ -1,9 +1,10 @@
 import { FilterLabel, FilterInput } from './Filter.styled';
 import { useSelector, useDispatch } from 'react-redux';
 import { updateFilter } from '../../redux/filterSlice';
+import { selectFilter } from '../../redux/selectors';
 
 export default function Filter() {
-  const filter = useSelector(state => state.filter.text);
+  const filter = useSelector(selectFilter);
   const dispatch = useDispatch();
   const changeFilter = e => {
     dispatch(updateFilter(e.currentTarget.value));
