@@ -5,7 +5,6 @@ import { updateFilter } from '../../redux/filterSlice';
 export default function Filter() {
   const filter = useSelector(state => state.filter.text);
   const dispatch = useDispatch();
-  // console.log(filter);
   const changeFilter = e => {
     dispatch(updateFilter(e.currentTarget.value));
   };

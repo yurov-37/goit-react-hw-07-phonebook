@@ -3,7 +3,7 @@ import {
   fetchContacts,
   addContact,
   deleteContact,
-  filterContacts,
+  // filterContacts,
 } from './operations';
 
 export const contactsSlice = createSlice({
@@ -53,18 +53,18 @@ export const contactsSlice = createSlice({
       state.isLoading = false;
       state.error = action.payload;
     },
-    [filterContacts.pending](state) {
-      state.isLoading = true;
-    },
-    [filterContacts.fulfilled](state, action) {
-      state.isLoading = false;
-      state.error = null;
-      state.contacts = action.payload;
-    },
-    [filterContacts.rejected](state, action) {
-      state.isLoading = false;
-      state.error = action.payload;
-    },
+    // [filterContacts.pending](state) {
+    //   state.isLoading = true;
+    // },
+    // [filterContacts.fulfilled](state, action) {
+    //   state.isLoading = false;
+    //   state.error = null;
+    //   state.contacts = action.payload;
+    // },
+    // [filterContacts.rejected](state, action) {
+    //   state.isLoading = false;
+    //   state.error = action.payload;
+    // },
   },
 });
 
